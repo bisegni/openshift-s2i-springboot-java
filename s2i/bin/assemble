@@ -62,7 +62,7 @@ execute_gradle_build()
   cp -v $HOME/build/libs/*.* $DEPLOY_DIR 2> /dev/null
 
   # Clean up after Gradle run ....
-  gradle clean
+  gradle clean ${GRADLE_ARGS_APPEND}
 
   if [ -d "$HOME/.gradle/caches" ]; then
     rm -rf $HOME/.gradle/caches
